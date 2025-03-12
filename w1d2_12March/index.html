@@ -202,18 +202,35 @@
 
     <p>Here is a video clip of modern anime</p>
     
-    <video>
-        
+    <a href="https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba">
+    <video src="video/demon_slayer_ep24.mp4" width="500" controls muted>
+        Your browser does not support video.
     </video>
+    </a>
 
-    <video width="250" height="250" controls>
-        <source src="" type="">
-    </video>
+    <br><br>
+
+    <form action="some_page.php" method="get">
+        <label for="anime">Pick your fav anime for similar recommendations:</label>
+        <input list="animes" name="anime" id="anime">
+        <datalist id="animes">
+            <option value="MHA">
+            <option value="DBZ">
+            <option value="Death Note">
+            <option value="Vinland Saga">
+        </datalist>
+        <input type="submit">
+    </form>
+
+    <br><br>
+
+    <iframe src="https://en.wikipedia.org/wiki/Death_Note" frameborder="1" width="500" height="350">
+    </iframe>
 
     <br><br>
 
     <footer>
-    <a href="https://en.wikipedia.org/wiki/Anime" title="Learn more" target="_blank">see more info about anime on wikipedia</a>
+        <a href="https://en.wikipedia.org/wiki/Anime" title="Learn more" target="_blank">see more info about anime on wikipedia</a>
         <p><a href="#top">Go to top</a></p>
     </footer>
 
