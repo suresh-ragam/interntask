@@ -1,0 +1,24 @@
+.container{
+    display: grid;
+    grid-template-areas: 
+    'myArea myArea . . . .'
+    'myArea myArea . . . .';
+    gap: 5px;
+    background-color: lightblue;
+    padding: 10px;
+    height: 250px;
+    /* place-content: center;  */
+  }
+  
+  .container > div{
+    border: 1px solid black;
+    text-align: center;
+    background-color: gray;
+    font-size: 30px;
+    padding: 10px;
+  }
+  
+  
+  #item1{
+    grid-area: myArea;
+  }
