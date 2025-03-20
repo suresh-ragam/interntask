@@ -64,6 +64,7 @@ h2{
 }
 
 .todo-container:hover{
-    transform: scale(105%,105%);
+    transform: scale(1.05);
     transition: 0.5s ease-in-out;
+    box-shadow: 0 8px 16px rgb(241, 161, 241);
 }
