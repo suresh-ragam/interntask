@@ -60,6 +60,7 @@ h2{
 
 .todo-list input[type="checkbox"]:checked + label{
     text-decoration: line-through;
+    opacity: 0.3;
     color: rgb(161, 147, 147);
 }
 
