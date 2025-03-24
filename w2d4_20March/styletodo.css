@@ -51,7 +51,15 @@ h2{
 .todo-list li{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 10px;
+    margin-right: 0px;
+}
+
+.todo-list label{
+    flex-grow: 1;
+    margin-left: 0px;
+    white-space: nowrap;
 }
 
 .todo-list input[type="checkbox"]{
@@ -64,8 +72,22 @@ h2{
     color: rgb(161, 147, 147);
 }
 
+.todo-list input[type="checkbox"]:checked~.btn{
+    display: none;
+}
+
 .todo-container:hover{
     transform: scale(1.05);
     transition: 0.5s ease-in-out;
     box-shadow: 0 8px 16px rgb(241, 161, 241);
+}
+
+.btn{
+    margin-left: 10px;
+    padding: 5px 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background: rgb(75, 71, 71);
+    color: white;
 }
