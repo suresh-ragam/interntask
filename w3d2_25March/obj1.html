@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = {
+            name : 'adam',
+            age : 25,
+            "likes birds" : true,
+        };
+
+        user.isAdmin = true;
+        delete user.age;
+
+        //let key = "likes birds";
+        let key = prompt("what do u wanna know about user?",'');
+
+        alert(user[key]);
+
+    </script>
+</body>
+</html>
