@@ -1,0 +1,161 @@
+body{
+    font-family: Arial, sans-serif;
+    background: rgb(234, 236, 237);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.todo-container{
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 330px;
+}
+
+.todo-list{
+    list-style-type: none;
+    padding: 0;
+}
+
+.darkmode{
+    background: rgb(52, 49, 49);
+}
+
+.darkmode .todo-container{
+    background: black;
+    color: white;
+    box-shadow: 0 4px 8px rgba(226, 224, 224, 0.2);
+}
+
+h2{
+    margin-bottom: 15px;
+}
+
+.input-area{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.input-area input{
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#add-task{
+    padding: 8px 12px;
+    background: rgb(52, 50, 50);
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+
+.todo-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-right: 0px;
+}
+
+.todo-list label{
+    flex-grow: 1;
+    margin-left: 0px;
+    white-space: nowrap;
+}
+
+.todo-list input[type="checkbox"]{
+    cursor: pointer;
+}
+
+.todo-list input[type="checkbox"]:checked + label{
+    text-decoration: line-through;
+    opacity: 0.3;
+    color: rgb(161, 147, 147);
+}
+
+.todo-list input[type="checkbox"]:checked~.btn{
+    display: none;
+}
+
+.todo-list input[type="checkbox"]:checked~.edit-input{
+    display: none;
+}
+
+.todo-container:hover{
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 8px 16px rgb(241, 161, 241);
+}
+
+.btn{
+    margin-left: 10px;
+    padding: 5px 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background: rgb(75, 71, 71);
+    color: white;
+}
+
+#theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: rgb(58, 65, 65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.darkmode #theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: rgb(58, 65, 65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.darkmode #task-input{
+    color: white;
+    background-color: black;
+}
+
+.darkmode #add-task{
+    background-color: rgb(29, 26, 26);
+}
+
+/* by default */
+.light-icon{
+    display: none;
+}
+.dark-icon{
+    display: inline;
+}
+
+/* dark mode */
+.darkmode .light-icon{
+    display: inline;
+}
+.darkmode .dark-icon{
+    display: none;
+}
+
+#add-task:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
