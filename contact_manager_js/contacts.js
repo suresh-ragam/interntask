@@ -87,7 +87,7 @@ function handleEdit(row, id) {
     const tds = row.querySelectorAll('td');
 
     tds[0].innerHTML = `<input type="text" value="${contact.name}">`;
-    tds[1].innerHTML = `<input type="text" value="${contact.phone}" pattern="\d{10}" maxlength="10">`;
+    tds[1].innerHTML = `<input type="text" value="${contact.phone}" maxlength="10" oninput="this.value = this.value.replace(/[^0-9]/g, '')">`;
     tds[2].innerHTML = `<input type="text" value="${contact.email}">`;
 
     const actionTd = tds[3];
