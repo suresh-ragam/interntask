@@ -3,21 +3,43 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import Welcome from './components/Welcome';
 import AdminPage from './components/AdminPage';
-import AdminRoute from './components/AdminRoute';
+import Overview from './components/Overview';
+import Settings from './components/Settings';
+import ProtectedRoute from './components/ProtectedRoute';
 import './App.css';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path = '/login' element = {<Login />}/>
-        <Route path = '/signup' element = {<Signup />}/>
-        <Route path = '/welcome' element = {<Welcome />}/>
-        <Route path = "*" element = {<Navigate to = '/login' replace/>} />
-        <Route path = '/admin' element = { <AdminRoute> <AdminPage /> </AdminRoute> }/>
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute>
+              <AdminPage />
+            </ProtectedRoute>
+          }
+        >
+          <Route path="overview" element={<Overview />} />
+          <Route path="settings" element={<Settings />} />
+        </Route>
+
+        <Route
+          path="/welcome"
+          element={
+            <ProtectedRoute>
+              <Welcome />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>
     </Router>
   );
 }
 
-export default App
+export default App;
