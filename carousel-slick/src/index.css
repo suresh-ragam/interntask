@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #330a50 0%, #330a50 50%, #8027b8 100%);
+    font-family:'Roboto', sans-serif;
+}
+
+h2 {
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    color: rgb(54, 255, 54);
+}
+
+.slick-slide-gap {
+  padding: 0 12px;
+  box-sizing: border-box;
+}
