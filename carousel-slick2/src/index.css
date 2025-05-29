@@ -1,0 +1,15 @@
+.slick-slide-gap {
+  padding: 0 24px;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.slick-slide > div {
+  overflow: visible;
+  border-radius: 24px;
+  background: transparent;
+}
+
+.slick-list {
+  overflow: visible !important;
+}
